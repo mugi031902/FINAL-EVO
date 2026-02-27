@@ -1,0 +1,22 @@
+<?php
+session_start();
+session_destroy();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="1;url=index.php">
+    <title>Logging out...</title>
+</head>
+<body>
+    <script>
+        // Clear session and redirect
+        localStorage.removeItem('mab_session');
+        window.location.href = 'index.php';
+    </script>
+    <p style="text-align:center; padding: 50px; font-family: Arial, sans-serif;">
+        Logging out... Please wait.
+    </p>
+</body>
+</html>
